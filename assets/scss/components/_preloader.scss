@@ -1,0 +1,178 @@
+/*----------------------------
+  PRELOADER CSS
+------------------------------*/
+
+#preloader {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-white);
+}
+
+
+$textDur: 1550ms;
+$waveDur: 3100ms;
+.preloader-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18rem;
+  height: 10rem;
+}
+
+.preloader-text {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  color: var(--color-black);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 900;
+  animation: text $textDur ease-in infinite;
+  transform: translatez(0);
+  &-1 {
+    left: 0rem;
+    transform: translate3d(0, -4rem, 0);
+    animation: text-w $textDur ease-in infinite;
+  }
+  &-2 {
+    left: 1.4rem;
+    animation-delay: 150ms;
+  }
+  &-3 {
+    left: 4.6rem;
+    animation-delay: 230ms;
+  }
+  &-4 {
+    left: 7.6rem;
+    animation-delay: 310ms;
+  }
+  &-5 {
+    left: 10.6rem;
+    animation-delay: 390ms;
+  }
+  &-6 {
+    left: 12.6rem;
+    animation-delay: 470ms;
+  }
+  &-7 {
+    left: 16rem;
+    animation-delay: 550ms;
+  }
+  
+}
+
+.coast { //wave: translate-x
+  display: inline-block;
+  position: absolute;
+  left: 1.3rem;
+  bottom: 1.7rem;
+  width: 4.2rem;
+  height: 1.2rem;
+  animation: coast $waveDur linear infinite;
+  transform: translateZ(0);
+}
+
+.wave-rel-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 2rem;
+  perspective-origin: 0% 50%;
+}
+
+.wave { // wave: width && scale && rotate 
+  display: inline-block;
+  position: absolute;
+  width: 4.2rem;
+  height: 1.2rem;
+  @include border-radius(1.1rem);
+  background: rgb(254,218,54);
+  will-change: width;
+  animation: wave $waveDur linear infinite;
+  transform: translateZ(0) scale(0);
+}
+
+.delay {
+  animation-delay: math.div($waveDur, 2);
+}
+
+@keyframes text {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+  }
+  45% {
+    transform: translate3d(0, -4rem, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes text-w {
+  0% {
+    transform: translate3d(0, -4rem, 0);
+  }
+  38% {
+    transform: translate3d(0, -4rem, 0);
+  }
+  69% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -4rem, 0);
+  }
+}
+
+@keyframes coast {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  23% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(16rem, 0, 0);
+  }
+  100% {
+    transform: translate3d(16rem, 0, 0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+    width: 2.2rem;
+  }
+  10% {
+    transform: scale(1);
+  }
+  23% {
+    width: 2.2rem;
+  }
+  32% {
+    width: 6.1rem;
+  }
+  42% {
+    width: 5rem;
+    transform: rotateY(0deg) scale(1, 1);
+  }
+  51% {
+    transform: rotateY(0deg) scale(0.8, 0.8);
+  }
+  52% {
+    transform: rotateY(0deg) scale(0.4, 0.4);
+  }
+  100% {
+    transform: rotateY(90deg) scale(0);
+  }
+}

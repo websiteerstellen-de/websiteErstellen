@@ -1,0 +1,51 @@
+/*--------------------------
+  ABOUT US
+  --------------------------*/
+.about-wrap{
+  position: relative;
+  overflow: hidden;
+}
+.counter-wrap {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  .counter-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 160px;
+    margin-bottom: 30px;
+    background-image: url(../../assets/images/bg/icon-bg.png);
+  }
+  .counter {
+    text-align: center;
+    h4 {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-family: var(--font-heading);
+        font-size: 60px;
+        font-weight: 700;
+        background:
+        linear-gradient(to right, #41b681 10%, #41d49f 10%, #41b681 60%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textshadow 1.8s linear infinite; 
+    }
+   
+  }
+  h5 {
+    text-transform: uppercase;
+  }
+}
+@keyframes textshadow {
+  to {
+    background-position: -200% center;
+  }
+}

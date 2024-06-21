@@ -1,0 +1,42 @@
+/*----------------------------------------
+  SPACING
+----------------------------------------*/
+
+// Spacing mixin
+@mixin spacing($property, $value, $lg-value, $xl-value, $xxl-value) {
+  #{$property}: $value;
+  @media #{$lg} {
+    #{$property}: $lg-value;
+  }
+  @media #{$xl} {
+    #{$property}: $xl-value;
+  }
+  @media #{$xxl} {
+    #{$property}: $xxl-value;
+  }
+}
+
+// Spacing classes
+.mt-120 {
+  @include spacing(margin-top, 60px, 80px, 100px, 120px);
+}
+
+.mb-120 {
+  @include spacing(margin-bottom, 60px, 80px, 100px, 120px);
+}
+
+.pt-120 {
+  @include spacing(padding-top, 60px, 80px, 100px, 120px);
+}
+
+.pb-120 {
+  @include spacing(padding-bottom, 60px, 80px, 100px, 120px);
+}
+
+.pt-100 {
+  @include spacing(padding-top, 40px, 60px, 80px, 100px);
+}
+
+.pb-100 {
+  @include spacing(padding-bottom, 40px, 60px, 80px, 100px);
+}

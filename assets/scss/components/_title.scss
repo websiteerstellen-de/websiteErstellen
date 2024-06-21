@@ -1,0 +1,68 @@
+/*----------------------------------
+  SECTION TITLE 
+  -----------------------------------*/
+
+.section-title-wrap {
+  position: relative;
+  margin-bottom: 40px;
+  
+.section-title {
+  display: inline-block;
+  position: relative;
+  margin: 5px 0 40px;
+  text-transform: capitalize;
+  line-height: 1.4;
+  @include font-size($h1-font-size);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 20px;
+    height: 8px;
+    @include border-radius(4px);
+    background-color: #fed104;
+    animation: animate 6s linear infinite;
+  }
+
+  &::before {
+    right: 50%;
+    margin-right: 4px;
+  }
+
+  &::after {
+    left: 50%;
+    margin-left: 4px;
+  }
+  
+  
+}
+p{
+  display: inline-block; 
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0;
+  max-width: 1200px;
+}
+}
+
+@keyframes animate {
+  0% {
+      width: 20px;
+  }
+
+  25% {
+    width: 50px;
+  }
+  50% {
+    width: 50px;
+  }
+  75% {
+    width: 100px;
+  }
+
+  100% {
+    width: 100px;
+  }
+}

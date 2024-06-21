@@ -1,0 +1,44 @@
+/*-------------------------------
+  LANGUAGE DROPDOWN
+  --------------------------------*/
+.language-switch{
+  margin-right: 25px;
+  padding-right: 10px;
+  a{
+    position: relative;
+    color: var(--color-white);
+    &:hover,&:focus{
+      color: var(--color-secondary);
+    }
+    
+  }
+  .dropdown-toggle::after {
+    content: "\ea99";
+    position: absolute;
+    margin-left: 0;
+    font-size: 24px;
+    font-family: IcoFont !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    line-height: 1.5;
+    border: 0;
+  }
+  .dropdown-menu {
+    background-color: var(--color-primary);
+    border: 0;
+    li{
+      border-bottom: 1px solid var(--color-line-menu);
+      &:last-child{
+        border-bottom:none;
+      }
+    }
+    .dropdown-item:focus, .dropdown-item:hover {
+      background-color:transparent;
+    }
+  }
+}

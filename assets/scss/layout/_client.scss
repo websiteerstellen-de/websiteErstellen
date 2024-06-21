@@ -1,0 +1,24 @@
+/*-------------------------------
+  Client
+  --------------------------------*/
+  .client-wrap .client-slider {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 30px;
+  }
+  .client-logo-wrap img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .client-wrap .client-slider {
+      padding: 0 0 30px;
+    }
+    .client-logo-wrap {
+      padding: 0;
+      text-align: center;
+    }
+ 
+  }

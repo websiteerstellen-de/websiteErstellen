@@ -1,0 +1,107 @@
+/*-------------------------------
+  TEAM
+  --------------------------------*/
+
+.team-wrap{
+  position: relative;
+  overflow: hidden;
+}
+.team-box {
+
+  &-wrap {
+    margin-top: 30px;
+    img {
+      width: 100%;
+    }
+  }
+  &-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--block-border-radius);
+    transition: all 0.3s ease;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: var(--block-border-radius);
+      background-color: rgba(24, 33, 46, 0.35);
+    }
+      img {
+        width: 100%;
+        border-radius: var( --block-border-radius);
+      }
+    
+  }
+
+  &-social {
+    position: relative;
+
+    ul {
+      position: absolute;
+      bottom: -3rem;
+      left: 50%;
+      margin-left: -130px;
+      width: 260px;
+      height: 60px;
+      background: var(--color-primary);
+      border-top-left-radius: var(--block-border-radius);
+      border-top-right-radius: var(--block-border-radius);
+      padding-top: 15px;
+      text-align: center;
+      @include opacity(0);
+      transition: all 0.3s ease;
+      z-index: 2;
+      li {
+        display: inline-block;
+        a {
+          font-size: 22px;
+          color: var(--color-white);
+          padding: 10px;
+          &:hover {
+            color: var(--secondary);
+          }
+        }
+      }
+    }
+
+
+  }
+
+  &-wrap:hover .team-box-social ul {
+    @include opacity(1);
+    bottom: 0;
+  }
+
+
+
+  &-info {
+    text-align: center;
+  }
+
+  &-title {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding: 35px 0 16px;
+    text-transform: uppercase;
+    @include font-size($h6-font-size);
+  }
+
+  &-desig{
+    color: var(--gray-2);
+    font-family: var(--body-font);
+    font-weight: 500;
+    text-transform: uppercase;
+    @include font-size(1.2rem);
+
+  }
+
+
+}

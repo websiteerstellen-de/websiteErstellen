@@ -1,0 +1,52 @@
+/*-------------------------------
+  SERVICES
+  -------------------------------*/
+.service-wrap{
+  position: relative;
+}
+.service-box 
+{
+  margin-bottom: 60px;
+  @media #{$md} {
+    margin-bottom:0;
+    }
+
+.box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  width: 220px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border: 6px solid #ffcb08;
+  border-radius: 100%;
+}
+h5{
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+p{
+  display: inline-block;
+  margin-bottom: 15px;
+  max-width: 500px;
+}
+&:hover .spin{border: 0;}
+      &:hover .spin::before{
+        border-bottom-color: var(--color-secondary);
+          border-right-color: var(--color-secondary);
+          border-top-color: var(--color-secondary);
+          transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+      }
+      &:hover .spin::after {
+          border-left-width: 6px;
+          border-right-width: 6px;
+          border-top: 6px solid var(--color-secondary);
+          transform: rotate(270deg);
+          transition: border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+          transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+          transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+      }
+}

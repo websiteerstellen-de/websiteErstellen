@@ -1,0 +1,91 @@
+/*-----------------------------
+  BREADCRUMB CSS
+  -----------------------------*/
+.breadcrumb{
+&-wrap {
+  position: relative;
+  padding: 260px 0 120px;
+  text-align: center;
+  background-image: linear-gradient(black, black), url(../images/bg/hero-1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: saturation;
+    @media #{$md} {
+      padding: 325px 0 170px;
+      text-align: left;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      @include opacity(.75);
+      background-color: var(--color-primary);
+      background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .row > *{
+      z-index: 1;
+    }
+  }
+
+  &-title {
+    color: var(--color-white);
+    text-transform: uppercase;
+  }
+
+  &-path {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    ol {
+      font: {
+        style: normal;
+        weight: 500;
+        size: 20px;
+      }
+      line-height: 1.3;
+      text-transform: capitalize;
+      color: var(--color-white);
+      background: var(--color-primary) border-box;
+      padding: 15px 30px;
+      margin-bottom: 0;
+      @include border-radius(var(--block-border-radius) var(--block-border-radius) 0 0);
+      li{
+        display: inline-block;
+       a {
+        position: relative;
+        padding-right: 20px;
+        transition: all 0.3s ease;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 13px;
+          right: 4px;
+          width: 6px;
+          height: 6px;
+          @include border-radius(50%);
+          background-color: var(--color-white);
+        }
+
+        &:hover {
+          color: var(--color-secondary);
+
+          &::after {
+            width: 100%;
+            background-color: var(--color-secondary);
+          }
+        }
+      }
+    }
+    }
+  }
+}

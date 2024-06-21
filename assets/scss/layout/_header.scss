@@ -1,0 +1,343 @@
+/*----------------------------
+   HEADER CSS
+  ----------------------------*/
+
+.page-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 300px;
+  overflow: hidden;
+}
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+.header-nav{
+  width: 100%;
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 8px 0;
+  align-items: center;
+  transition: all 0.3s ease;
+@media #{$md} {
+  padding: 8px  15px;
+}
+@media #{$lg} {
+  padding: 8px  25px;
+}
+@media #{$xl} {
+  padding: 8px  55px;
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  flex: 1 auto;
+  flex-basis: 25%;
+  @media #{$md} {
+    margin-right: 30px;
+    flex-basis: unset;
+  }
+  @media #{$xxl} {
+    margin-right: 100px;
+  }
+  a{
+    margin-right: 0;
+  }
+  .main-logo{
+    width: 70%;
+    @media #{$md} {
+      width: 100%;
+    }
+  }
+}
+.mobile-nav {
+  position: fixed;
+  bottom: -60px;
+  left: calc(50% - 60px);
+  width: 120px;
+  height: 120px;
+  color: white;
+  background: var(--color-primary);
+  @include border-radius(100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  line-height: 80px;
+  text-align: center;
+  z-index: 100;
+  @media #{$lg} {
+    display: none;
+  }
+.menu-toggler{
+  height: 60px;
+  padding: 22px 20px;
+  width: 80px;
+  background-color: transparent;
+  border: 0;
+  .line {
+    display: block;
+    height: 4px;
+    width: 90%;
+    margin-bottom: 7px;
+    background-color: #fff;
+    @include border-radius(5px);
+    transition: 0.2s ease-out;
+  }
+  
+  .line.half {
+    width:50%;
+  }
+  
+  &.open .line.first {
+    transform: translateY(14px) rotateZ(-45deg);
+  }
+  
+  &.open .line.third {
+    transform: translateY(-7px) rotate(45deg);
+  }
+  
+  &.open .line.half {
+    @include opacity(0);
+    width:0;
+  }
+  
+ 
+}
+
+}
+.dropdown-toggle::after {
+  border: none;
+}
+.navbar-collapse{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 90px;
+  background: linear-gradient(to left, #d7d2cc, #304352);
+  z-index: 99;
+  overscroll-behavior: contain;
+  @media #{$lg} {
+    position: relative;
+    background: transparent;
+    width: auto;
+    padding-bottom: 0;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    z-index: 1;
+  }
+.navbar-nav .nav-item {
+  position: relative;
+  padding:5px;
+  @media #{$lg} {
+    padding: 20px 5px;
+  }
+  &.nav-dropdown::before{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    z-index: -1;
+    display: block;
+    content: "\eaca";
+    font-family: IcoFont !important;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;    
+    @media #{$lg} {
+      display: none;
+    }
+  }
+  .nav-link {
+    position: relative;
+    margin: 0 10px;
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 4px;
+      background-color: #e2bb0d;
+      transition: 0.7s;
+    }
+    
+    &::before {
+      top: 100%;
+      left: 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    
+    &::after {
+      top: 100%;
+      right: 0;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      z-index: 999;
+    }
+
+  &.active {
+    color: var( --color-primary);
+
+    &::before {
+      width: 50%;
+      transform: translateX(99%);
+    }
+    &::after {
+      width: 50%;
+      transform: translateX(-100%);
+    }
+  }
+
+  &:hover {
+    color: var( --color-primary);
+
+    &::before {
+      width: 50%;
+      transform: translateX(100%);
+    }
+    &::after {
+      width: 50%;
+      transform: translateX(-100%);
+    }
+  }
+}
+  .dropdown-menu {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background-color: transparent;
+    transition: all 0.3s;
+    @media #{$lg} {
+      width: 260px;
+      padding: 15px 0;
+      border: none;
+      @include border-radius(5px);
+      box-shadow: 0px 0px 37px rgba(69, 81, 113, 0.06);
+      background-color: var(--color-primary);
+    }
+    &::before {
+      @media #{$lg} {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 6px;
+        left: 0;
+        top: 0;
+        background-color: var( --color-secondary);
+      }
+    }
+
+
+    li {
+      position: relative;
+      margin: 0 25px;
+      @media #{$lg} {
+        margin: 0;
+        
+      }
+      &:last-child .dropdown-item {
+      @media #{$lg} {
+        border-bottom: 0;
+      }
+      }
+    }
+  }
+
+  .dropdown-item {
+    display: block;
+    padding: 9px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-line-menu);  
+    @media #{$lg} {
+    padding-left: 30px;
+    }
+    &:hover,
+    &.active {
+      color: var(--color-secondary);
+      background: transparent;
+    }
+  }
+  @media #{$lg} {
+    .dropdown-menu {
+      display: none;
+      @include opacity(0);
+      visibility: hidden;
+    }
+  
+    &:hover .dropdown-menu {
+      display: block;
+      visibility: visible;
+      animation: fadeInRight .3s ease;
+      @include opacity(1);
+    }
+  }
+}
+}
+.header-contact{
+  display: flex;
+  margin-left: 80px;
+  align-items: center;
+  justify-content: flex-end;
+}
+}
+@keyframes fadeInRight{
+  0%{
+    @include opacity(0);
+      transform:translate3d(100%,0,0)
+  }
+  100%{
+    @include opacity(1);
+      transform:none
+  }
+}
+/* STICKY STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header.is-sticky {
+  @media #{$lg} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #304352;
+    background-image: linear-gradient(to left, #d7d2cc, #304352);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.35s ease-out;
+  }
+
+}
+
+.page-header.is-sticky img {
+  @media #{$lg} {
+    max-width: 80%;
+  }
+
+}
+
+.no-scroll{
+  margin: 0; height: 100%; overflow: hidden;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,97 @@
+/*-------------------------------
+  TESTIMONIALS
+  --------------------------------*/
+.testimonial-slider  {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background: transparent url(../images/bg/testimonial-bg.png) 0 0/100% 100%;
+  padding: 30px 15px;
+  @media #{$lg} {
+    padding: 90px 30px;
+  }
+  @media #{$xl} {
+    padding: 90px 60px;
+  }
+  .testimonials-text {
+    position: relative;
+    padding: 20px;
+    @media #{$lg} {
+      padding: 30px 60px;
+    }
+    @media #{$xl} {
+      padding: 30px 180px;
+    }
+    p{
+      margin-bottom: 0;
+      @include font-size($h6-font-size);
+    }
+    .testimonials-quote-top-wrap{
+      position: absolute;
+      left:0;
+      top: 10px;
+      @media #{$lg} {
+        left:30px;
+        top: 20px;
+      }
+      @media #{$xl} {
+        left:120px;
+        top: 20px;
+      }
+      i{
+        font-size: 30px;
+        color: var( --color-primary); 
+        @include opacity(.2);
+        @media #{$lg} {
+          font-size: 60px;
+        }
+      }
+    }
+    .testimonials-quote-wrap{
+      position: absolute;
+      right:0;
+       bottom:10px;
+       @media #{$lg} {
+        right: 70px;
+        bottom:20px;
+      }
+      @media #{$xl} {
+        right: 120px;
+        bottom:20px;
+      }
+       i{
+        font-size: 30px;
+        color: var( --color-primary); 
+        @include opacity(.2);
+        @media #{$lg} {
+          font-size: 60px;
+        }
+      }
+      }
+  }
+  .testimonials-title {
+    font-size: 15px;
+    margin-bottom: 100px;
+    color: var(--color-secondary);
+    @media #{$lg} {
+      font-size: 20px;
+    }
+  }
+}
+
+.swiper-testimonial-pagination{
+  position: absolute;
+  text-align: center;
+  bottom: 90px !important;
+  @media #{$lg} {
+    bottom: 120px !important;
+  }
+  .swiper-pagination-bullet {
+    @include opacity(.5);
+    background-color: var(--color-secondary);
+  }
+  .swiper-pagination-bullet-active {
+    @include opacity(.8);
+    background-color: var(--color-primary);
+  }
+}

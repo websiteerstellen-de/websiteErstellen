@@ -1,0 +1,44 @@
+/*
+Template Name: MAHA
+Theme URI: https://wemakeitlive.com/
+Author: Vinod
+Support: vinod@wemakeitlive.com
+Author URI: https://wemakeitlive.com/
+Description: The MAHA portfolio template is an excellent choice for professionals from various fields, including developers, designers, freelancers, engineers, content writers, instructors, photographers, politicians, and other experts who wish to showcase their skills, bio, and portfolio. The template is highly customizable, with well-organized layers that make it easy to effect changes without complications. You can effortlessly personalize the layouts to suit your preference, and even mix the elements and components to create your own design with the business template. With its versatility and user-friendly features, the MAHA portfolio template is a smart option for your next projects.
+Version: 1.0.0
+*/
+
+@use 'sass:math';
+@import "../../node_modules/rfs/scss";
+
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+// Others
+@import "base/spacing";
+@import "base/typography";
+@import "base/shapes";
+@import "components/preloader";
+@import "components/button";
+@import "components/title";
+@import "components/search";
+@import "components/language";
+@import "layout/header";
+@import "layout/banner";
+@import "layout/about-us";
+@import "layout/contact";
+@import "pages/about";
+@import "layout/service";
+@import "pages/service";
+@import "layout/process";
+@import "layout/project";
+@import "pages/contact";
+@import "layout/news";
+@import "layout/testimonial";
+@import "layout/client";
+@import "layout/footer";
+@import "pages/content";
+@import "layout/breadcrumb";
+@import "layout/team";

@@ -1,0 +1,39 @@
+/*-------------------------------
+  ABOUT US PAGE
+  --------------------------------*/
+.whyus-wrap{
+  position: relative;
+  padding-bottom: 150px;
+  @media #{$md} {
+    padding-bottom: 300px;
+  }
+  @media #{$xl} {
+    padding-bottom: 400px;
+  }
+&-bg{
+    position: absolute;
+    bottom: -10px;
+    text-align: center;
+    width: 100%;
+  div{
+    display:inline-block;
+    @include opacity(.5);
+  }
+}
+}
+.about-counter{
+  background: url(../images/bg/about-counter-block.jpg) center center no-repeat fixed;
+}
+.icon-list{
+  li {
+    position: relative;
+    padding-bottom: 10px;
+    &::before {
+      content: "\eed7";
+      font-family: IcoFont !important;
+      font-size: 25px;
+      padding-right: 7px;
+      color: var(--color-secondary);
+    }
+  }
+}

@@ -1,0 +1,103 @@
+/*-------------------------------
+  PROJECT
+  --------------------------------*/
+.project-slide{
+  position: relative;
+  background-color: #fff;
+  border-radius: var(--block-border-radius);
+  .project-image{
+    position: relative;
+    @media #{$lg} {
+      padding-left: 0;
+    }
+    .swiper-project-pagination{
+      bottom: -40px;
+      @media #{$md} {
+        bottom: 0;
+      }
+    }
+    img{
+      border-radius:var(--block-border-radius);
+      @media #{$lg} {
+        @include border-radius(0);
+        border-top-left-radius:var(--block-border-radius);
+        border-bottom-left-radius:var(--block-border-radius);
+
+      }
+    }
+  }
+  .swiper-pagination-bullet {
+    background-color: var(--color-primary);
+  }
+}
+.project-content-wrap{
+.project-content {
+  overflow: hidden;
+  padding-bottom: 60px;
+  @media #{$lg} {
+    margin-right: 30px;
+    padding-bottom:0;
+  }
+}
+.project-content-single {
+  text-align: center;
+  padding: 30px 15px;
+
+.project-content-text {
+  margin: 0;
+  font-size: 20px;
+}
+.project-content-title {
+  display: inline-block;
+  margin: 40px 0 35px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: #41b681;
+  text-decoration: none;
+}
+
+.project-content-line {
+  display: block;
+    height: 4px;
+    width: 100%;
+    margin-top: 40px;
+    clear: both;
+    background-color: var(--color-secondary);
+}
+.btn-project {
+  display: inline-block;
+  padding: 14.5px 36.25px;
+  min-width: 200px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  cursor: pointer;
+  outline: none !important;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  margin-top: 30px;
+}
+
+}
+
+}
+.project-filter{
+  .btn-filter{
+    padding: 5px 15px;
+    min-width: 100px;
+    font-size: 18px;
+    border-radius: var(--button-border-radius-2);
+    margin-bottom: 20px;
+  }
+  .active{
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+  }
+}

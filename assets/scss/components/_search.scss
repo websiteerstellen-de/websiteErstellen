@@ -1,0 +1,195 @@
+/*-------------------------------
+  SEARCH BOX
+  --------------------------------*/
+// Variables
+$base-px: 8px;
+$breakpoint: 768px;
+$breakpoint-max: $breakpoint - 1px;
+
+// Colours
+$background: #F7FBFB;
+$background-2: #EAF5F5;
+$background-3: #BBD8D8;
+
+
+.search-wrap{
+  margin-right: 10px;
+}
+.input,
+.button-reset,
+.button-icon {
+  max-width: 100%;
+  display: inline-block;
+  line-height: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+ }
+// Icon
+// ---------------------------
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: .3s ease-out;
+  
+  @media (min-width: $breakpoint) {
+    width: 32px;
+    height: 32px; } }
+
+
+
+// Button (open)
+// ---------------------------
+.button-open {
+  // Display/alignment
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  i{
+    color: var(--color-white);
+  }
+  &:hover i,
+  &:focus i{
+   color:var(--color-secondary) ; } }
+
+// Button (close)
+// ---------------------------
+.button-close {
+  position: absolute;
+  top: 7.5vw;
+  right: 7.5vw;
+  padding: 0;
+  background-color: transparent;
+  i{
+    font-size: 36px;
+      color:var(--color-white);
+  }
+ }
+  
+.button-search {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 25px $base-px*2 21px;
+
+  // Same horizontal padding .input-search
+  @media (min-width: $breakpoint) {
+    padding: 30px ($base-px*6); } }
+    .button-search i{
+      font-size: 36px;
+      color:var(--color-secondary) ;
+    }
+// Search
+// ---------------------------
+.form-search {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100px;
+  @media (min-width: $breakpoint) {
+    max-width: 720px; } }
+
+// Input
+// ---------------------------
+.input-search {
+  // Sizing
+  padding: 26px ($base-px*2) 25px; // 72px height
+  width: 100%;
+  
+  // Style
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+  background-color: var( --color-white);
+  box-shadow:
+    0 1px 1px rgba($background-3, .6),
+    0 3px 3px rgba($background-3, .4),
+    0 8px 16px rgba($background-3, .3);
+
+  @media (min-width: $breakpoint) {
+    // Sizing
+    padding: 29px ($base-px*6);
+    
+    // Style
+    font-size: 32px;
+    @include border-radius(30em);
+   } 
+  }
+
+.input-search::placeholder {
+  color: var(--color-secondary); }
+
+// Overlay
+// ---------------------------
+.overlay {
+  // Display
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  
+  // Positioning
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  // Style
+  background-color: var(--color-primary);
+  
+  @media (min-width: $breakpoint) {
+    align-items: center;
+    align-content: center; 
+  } 
+}
+
+// Transition
+// ----------------------
+// Initial state
+.hiding {
+  max-height: 0;
+  @include opacity(0);
+  bottom: 0;
+  
+  // This transition happens when the close button is clicked
+  // and should be faster than the .showing state
+  transition:
+    max-height .3s .2s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity .6s ease-out;
+  
+  // When hiding inner elements should be invisible too
+  .button-search,
+  .input-search {
+    @include opacity(0);
+   }
+  
+  // Offset the button
+  .button-search {
+    transform: translate3d(0, 33%, 0); }
+
+  // Offset the input more 
+  .input-search {
+    transform: translate3d(0, 50%, 0); } }
+
+// Showing state
+.showing {
+  max-height: 100vh;
+  top: 0;
+ 
+  transition:
+    max-height .4s .2s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity .8s ease-out; }
+
+// Transitions
+.button-search {
+  transition: .4s .6s ease-out; }
+
+.input-search {
+  transition: .8s .3s ease-out; }

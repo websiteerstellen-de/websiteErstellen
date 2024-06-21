@@ -1,0 +1,126 @@
+/*-------------------------------
+  BACKGROUND SHAPES
+  --------------------------------*/
+
+.bg-shapes-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  li {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    @include border-radius(100%);
+    border: solid 1px var(--color-primary);
+    color: transparent;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);  
+
+&:nth-child(1) {
+  animation-delay: 6s;
+  animation: cube-scale-20 12s ease-in forwards infinite;
+  left: 0vw;
+  top: 0vh;
+}
+&:nth-child(2) {
+  animation-delay: 1s;
+  animation: cube 12s ease-in forwards infinite;
+  border-color: var(--color-secondary);
+  left: 54vw;
+  top: 14vh;
+}
+&:nth-child(3) {
+  animation-delay: 1s;
+  animation: cube 12s ease-in forwards infinite;
+  left: 56vw;
+  top: 12vh;
+}
+&:nth-child(4) {
+  animation-delay: 6s;
+  animation: cube-scale-20 12s ease-in forwards infinite;
+  border-color: var(--color-secondary);
+  left: 100vw;
+  top: 0vh;
+}
+
+  }
+}
+
+.bg-shapes-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  li {
+    position: absolute;
+    bottom: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    @include border-radius(100%);
+    border: solid 1px var(--color-primary);
+    color: transparent;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);  
+
+&:nth-child(1) {
+  animation-delay: 4s;
+  animation: cube-scale-20 12s ease-in forwards infinite;
+  left: 0vw;
+  bottom: 0vh;
+}
+&:nth-child(2) {
+  animation-delay: 4s;
+  animation: cube 12s ease-in forwards infinite;
+  border-color: var(--color-secondary);
+  left: 0vw;
+  bottom: 10vh;
+}
+&:nth-child(3) {
+  animation-delay: 4s;
+  animation: cube 12s ease-in forwards infinite;
+  left: 100vw;
+  bottom: 10vh;
+}
+&:nth-child(4) {
+  animation-delay: 4s;
+  animation: cube-scale-20 12s ease-in forwards infinite;
+  border-color: var(--color-secondary);
+  left: 100vw;
+  bottom: 0vh;
+}
+
+  }
+}
+
+
+
+@keyframes cube {
+  from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      @include opacity(1);
+  }
+  to {
+      transform: scale(5) rotate(960deg) translate(-50%, -50%);
+      @include opacity(0);
+  }
+}
+@keyframes cube-scale-20 {
+  from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      @include opacity(1);
+  }
+  to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      @include opacity(0);
+  }
+}
