@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>web3pixel</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,100;0,200;0,400;0,500;0,600;1,1&family=Quicksand:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- All CSS Files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/icofont.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Accessibility -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="robots" content="noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+  <!-- Preloader Start -->
+
+  <div id="preloader">
+
+    <div class="preloader-container">
+      <div class="coast">
+        <div class="wave-rel-wrap">
+          <div class="wave"></div>
+        </div>
+      </div>
+      <div class="coast delay">
+        <div class="wave-rel-wrap">
+          <div class="wave delay"></div>
+        </div>
+      </div>
+      <div class="preloader-text preloader-text-1">L</div>
+      <div class="preloader-text preloader-text-2">O</div>
+      <div class="preloader-text preloader-text-3">A</div>
+      <div class="preloader-text preloader-text-4">D</div>
+      <div class="preloader-text preloader-text-5">I</div>
+      <div class="preloader-text preloader-text-6">N</div>
+      <div class="preloader-text preloader-text-7">G</div>
+    </div>
+
+
+  </div>
+  <!-- Preloader end -->
+
+  <!-- Main page wrapper start -->
+  <div class="page-wrapper">
+
+    <!-- Header start -->
+    <header class="page-header">
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-xxl-12">
+            <nav class="navbar navbar-expand-lg  navbar-light header-nav d-flex">
+              <div class="logo-wrap">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo.png" style="width: 250px; height: 250px;"  class="main-logo" alt="Maha Logo">
+                </a>
+                <div class="mobile-nav">
+                  <button class="menu-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
+                    aria-expanded="false" aria-label="Mobile navigation">
+                    <span class="line first"></span>
+                    <span class="line half"></span>
+                    <span class="line third"></span>
+                  </button>
+                </div>
+              </div>
+
+              <nav id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll header-menu">
+                  <li class="nav-item nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="dropdownHome" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">home</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownHome">
+
+                      <li><a class="dropdown-item" href="index.html">home</a></li>
+
+ 
+
+                    </ul>
+                  </li>
+                  <li class="nav-item nav-dropdown">
+                   
+                 
+                  </li>
+                  <li class="nav-item">
+                    <a href="service-list.html" class="nav-link">Leistung</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projkt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Kontakt</a>
+                  </li>
+                  
+                </ul>
+
+              </nav>
+
+              <div class="header-contact m-0">
+                <div class="search-wrap">
+                  <a href="#search" class="icon button-open">
+                    <i class="icofont-search"></i>
+                  </a>
+                </div>
+                <!-- Search form overlay start-->
+                <div id="search" class="overlay hiding">
+                  <button class="button-icon button-close">
+                    <i class="icofont-close-circled"></i>
+                  </button>
+                  <form action="#" class="form-search">
+                    <label for="keywords" class="visually-hidden">Suchen</label>
+                    <input class="input input-search" id="keywords" name="keywords" type="search"
+                      placeholder="Enter Keyword …" autocapitalize="off" required>
+                    <button type="submit" class="button-icon button-search">
+                      <i class="icofont-search-2"></i>
+                    </button>
+                  </form>
+                </div>
+                <!-- Search form overlay end-->
+
+                 
+
+                <div class="button-wrapper d-none d-xl-block">
+                  <a class="button button-yellow" href="contact.html">Kontakt</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <!-- Header end -->
+
+    <!-- Page content area start -->
+    <main>
+
+      <!-- Breadcrumb start -->
+      <section class="breadcrumb-wrap" aria-label="Breadcrumb"
+        style="background-image:linear-gradient(black, black), url(assets/images/bg/contact-page.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="breadcrum-title-wrap">
+                <h1 class="breadcrumb-title">Kontakt</h1>
+              </div>
+              <nav class="breadcrumb-path" aria-label="Breadcrumb">
+                <ol>
+                  <li><a href="index.html">Home</a></li>
+                  <li>Kontakt</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Breadcrumb end -->
+
+      <!-- Contact area start -->
+      <section class="contact-page pt-120 pb-120">
+        <div class="container-lg">
+          <ul class="bg-shapes-top">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class="bg-shapes-bottom">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="row">
+
+            <div class="col-md-12  col-lg-4">
+
+              <div class="contact-box">
+
+                <div class="contact-box-image white">
+                  <lottie-player src="assets/json/location.json" background="transparent" speed="1"
+                    style="width:120px; height:120px;display:inline-block;" loop autoplay></lottie-player>
+                </div>
+
+                <h3 class="contact-box-title">Buro</h3>
+
+                <p>1 blvd StraS Ave. <br> Manchester, de 201114</p>
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6  col-lg-4">
+
+              <div class="contact-box">
+
+                <div class="contact-box-image white">
+                  <lottie-player src="assets/json/email.json" background="transparent" speed="1"
+                    style="width:60px; height:60px;display:inline-block;" loop autoplay></lottie-player>
+                </div>
+
+                <h3 class="contact-box-title">Schreiben Sie Uns</h3>
+
+                <p>Infos@web3pixel.de <br> support@web3pixel.de</p>
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6  col-lg-4">
+
+              <div class="contact-box">
+
+                <div class="contact-box-image white">
+                  <lottie-player src="assets/json/phone.json" background="transparent" speed="1"
+                    style="width:80px; height:80px;display:inline-block;" loop autoplay></lottie-player>
+                </div>
+
+                <h3 class="contact-box-title">Phone Number</h3>
+
+                <p>+49<br> xxx - xxx - xxx</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Contact form start -->
+          <div class="row justify-content-center">
+
+            <div class="col-lg-10 pt-100">
+
+              <div class="section-title-wrap text-center">
+                <h2 class="section-title"><span class="section-title-text">Schreib uns eine Nachricht und wir melden uns gerne bei dir zurück:
+
+                   ? </span></h2>
+              </div>
+
+              <form action="https://api.web3forms.com/submit" method="post">
+
+                <div class="row">
+                  <input type="hidden" name="access_key" value="1d8c5a3f-b1d6-424c-b7ca-e65ff39c3c1e">
+
+                  <div class="col-md-6 form-floating mb-4">
+
+                    <input type="text" class="form-control" id="firstName" name="firstName"
+                      placeholder="Enter your first name" required>
+                    <label for="firstName">Name</label>
+
+                  </div>
+
+                  <div class="col-md-6 form-floating mb-4">
+
+                    <input type="text" class="form-control" id="lastName" name="lastName"
+                      placeholder="Enter your last name" required>
+                    <label for="lastName">Nachname</label>
+
+                  </div>
+
+                  <div class="col-md-6 form-floating mb-4">
+
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number"
+                      required>
+                    <label for="phone">Telefon</label>
+
+                  </div>
+
+                  <div class="col-md-6 form-floating mb-4">
+
+                    <input type="email" class="form-control" id="email" name="email"
+                      placeholder="Enter your email address" required>
+                    <label for="email">Email  </label>
+
+                  </div>
+
+                  <div class="col-12 form-floating">
+
+                    <textarea id="message" class="form-control" name="message" placeholder="Enter your message"
+                      style="height: 200px" required></textarea>
+                    <label for="message">
+                      Nachricht *
+                      </label>
+
+                  </div>
+
+                  <div class="col-12 mt-4 text-center">
+
+                    <div class="button-wrapper">
+                      <button type="submit" class="button button-reset button-yellow"> AbSenden</button>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </form>
+
+
+              <script>
+                window.onload = function() {
+                    // Reset the form fields when the page loads
+                    document.getElementById("form").reset();
+                };
+              </script>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+          </div>
+          <!-- Contact form end -->
+
+        </div>
+
+      </section>
+      <!-- Contact area end -->
+
+      <!-- Google Map start -->
+      <section class="map-wrap" aria-label="Google Map">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 map-block p-0 m-0">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d159868.66437081186!2d6.8143502!3d51.238454749999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8c97bf1465907%3A0x42760fc4a2a73b0!2sD%C3%BCsseldorf%2C%20Germany!5e0!3m2!1sen!2sma!4v1718985882806!5m2!1sen!2sma"
+               
+                
+                class="map" title="Google Map" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google Map end -->
+
+      <!-- Footer area start -->
+    <!-- Footer area start -->
+    <footer class="site-footer footer-bg">
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 text-center text-lg-start">
+              <div class="footer-widget">
+                <a href="index.html" class="footer-logo"><img src="assets/images/logo.png" alt="Logo Image"></a>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-start">
+              <ul class="footer-address">
+                <li><a href="tel:+123456789">+49 xxx  xxx xxx</a></li>
+                <li><a href="mailto:hello@example.com">infos@web3pixel.com</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+              <div class="button-block">
+                <span class="btn-tagline">For free quote
+                  <img src="assets/images/icons/arrow.png" alt=""></span>
+                <div class="button-wrapper">
+                  <a class="button button-yellow" href="contact.html">Rufen Sie Uns
+                    us</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+              <ul class="social">
+                <li>
+                  <a href="#" aria-haspopup="true" target="_blank" class="instagram" aria-label="Instagram">
+                    <i class="icofont-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-haspopup="true" target="_blank" class="facebook" aria-label="Facebook">
+                    <i class="icofont-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-haspopup="true" target="_blank" class="twitter" aria-label="Twitter">
+                    <i class="icofont-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-haspopup="true" target="_blank" class="linkedin" aria-label="LinkedIn">
+                    <i class="icofont-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+
+
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="copyright">&copy; 2023 Maha. All Rights Reserved.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+    <!-- Footer area end -->
+
+
+      <!-- Footer area end -->
+
+      <!-- Gooey filter start -->
+      <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
+      <!-- Gooey filter end -->
+
+    </main>
+    <!-- Page content area end -->
+
+  </div>
+  <!-- Main page wrapper end -->
+
+  <!-- All Javascript Files -->
+
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js//lottie-player.js"></script>
+  <script src="assets/js/scripts.js"></script>
+
+
+
+</body>
+
+</html>
